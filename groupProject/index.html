@@ -26,13 +26,36 @@
     <!--***** Main Body Section *****-->
     <!-- *************************** -->
 
-    <section>
+    <section class="mainBody">
 
         <!--*** Image Automatic Slideshow ***--> 
-        <img src="images/lake small.jpg" alt="Lake">
-        <img src="images/san diego small.jpg" alt="San Diego">
-        <img src="images/valley small.jpg" alt="Valley">
-        <img src="images/surf small.jpg" alt="Surf">
+        <img class="mySlides" src="images/lake small.jpg" alt="Lake">
+        <img class="mySlides" src="images/san diego small.jpg" alt="San Diego">
+        <img class="mySlides" src="images/house small.jpg" alt="Valley">
+        <img class="mySlides" src="images/mountain small.jpg" alt="Sky">
+
+
+        <!--***** This makes the Pictures Change Automatically *****-->
+        <script>
+            let slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}  
+
+              slides[slideIndex-1].style.display = "block";  
+            
+              setTimeout(showSlides, 4000); // Change image every 2 seconds
+            }
+        </script>
+
         
         <p>When an unknown printer took a galley of type and scrambled it to make a type specimen book. 
             It has survived not only five centuries, but also the leap into electronic typesetting, 
@@ -62,7 +85,7 @@
             <!-- Copyright -->  
             <section id="copyright">
 
-                <p>© 2020 <a href="#">Group 4</a></p>
+                <p>&copy; 2020 <a href="#">Group 4</a></p>
                 
             </section>
 
