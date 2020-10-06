@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    
+    
+}
+
+/**********************************/
+/************ Nav Bar *************/
+/**********************************/
+.main {
+    position: Absolute ;
+    display: inline-block;
+    background-color: lightgray;
+    opacity: 80%;
+    padding: 20px 0 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.main a {
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+}
+
+
+.main a:hover {
+    background-color: white;
+    opacity: 80%;
+
+}
+
+/**********************************/
+/************ Images **************/
+/**********************************/
+
+.img {
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mySlides {
+    max-width: 100%;
+    
+}
+
+
+/**********************************/
+/************* Main ***************/
+/**********************************/
+
+article {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    padding: 50px;
+    
+}
+
+/**********************************/
+/************ Footer **************/
+/**********************************/
+
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: lightgray;
+    
+}
+
+footer a{ 
+    text-decoration: none;
+    color: black;
+    bottom: 0;
+}
+
+.navTitle {
+    font-size: 25px;
+}
+
+.copyRight {
+    padding-top: 20px;
+    font-size: 15px;
+}
+
+
+.fa {
+    font-size: 30px;
+}
+
+.fa-twitter, .fa-facebook, .fa-instagram, .fa-envelope{
+    padding: 20px;
+}
+
+.fa:hover {
+    color: white;
+}
