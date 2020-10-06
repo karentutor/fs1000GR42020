@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
@@ -12,7 +14,7 @@
     <!-- ************************* -->
 
     <header class="navbar">
-        <nav>
+        <nav class="main">
             <a href="#">Home</a>
             <a href="#">About Us</a>
             <a href="#">Portfolio</a>
@@ -26,72 +28,80 @@
     <!--***** Main Body Section *****-->
     <!-- *************************** -->
 
-    <section class="mainBody">
+    <main class="mainBody">
 
-        <!--*** Image Automatic Slideshow ***--> 
-        <img class="mySlides" src="images/lake small.jpg" alt="Lake">
-        <img class="mySlides" src="images/san diego small.jpg" alt="San Diego">
-        <img class="mySlides" src="images/house small.jpg" alt="Valley">
-        <img class="mySlides" src="images/mountain small.jpg" alt="Sky">
+            <!--*** Image Automatic Slideshow ***--> 
+        <section class="imgs">
+            <img class="mySlides" src="images/lake.jpg" alt="Lake">
+            <img class="mySlides" src="images/san diego big.jpg" alt="San Diego">
+            <img class="mySlides" src="images/house big.jpg" alt="Valley">
+            <img class="mySlides" src="images/mountain big.jpg" alt="Sky">
+        </section>
 
+            <!--***** This makes the Pictures Change Automatically *****-->
+            <script>
+                let slideIndex = 0;
+                showSlides();
+                
+                function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}  
 
-        <!--***** This makes the Pictures Change Automatically *****-->
-        <script>
-            let slideIndex = 0;
-            showSlides();
-            
-            function showSlides() {
-              let i;
-              let slides = document.getElementsByClassName("mySlides");
-              
-              for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-              }
-              slideIndex++;
-              if (slideIndex > slides.length) {slideIndex = 1}  
+                slides[slideIndex-1].style.display = "block";  
+                
+                setTimeout(showSlides, 4000); // Change image every 4 seconds
+                }
+            </script>
 
-              slides[slideIndex-1].style.display = "block";  
-            
-              setTimeout(showSlides, 4000); // Change image every 2 seconds
-            }
-        </script>
-
-        
-        <p>When an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into electronic typesetting, 
-            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset 
-            sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
-            ike Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-    </section>
+        <article class="text">    
+            <p>When an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                It has survived not only five centuries, but also the leap into electronic typesetting, 
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset 
+                sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
+                ike Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </article>
+    </main>
 
     <!-- ************************* -->
     <!--***** Start Of Footer *****-->
     <!-- ************************* -->
 
-		<footer>
-				<section class="container">
-					<header>
-						<h2>Get in touch</h2>
-
-					</header>
-					<nav class="contact">
-						<a href="http://www.twitter.com" class="fa fa-twitter"><span>Twitter</span></a></li>
-						<a href="http://www.facebook.com" class="fa fa-facebook"><span>Facebook</span></a></li>
-						<a href="http://www.instagram.com" class="fa fa-instagram"><span>Instagram</span></a></li>
-                    </nav>
-                </section>
+<footer>
+	<section class="container">
+					
+		<nav class="contact">
+                    
+            <header class="navTitle">
+                <h2>Get in touch</h2>
+			</header>
             
-            <!-- Copyright -->  
-            <section id="copyright">
+                <a  href="http://www.twitter.com" class="fa fa-twitter"><span></span></a></li>
+				<a  href="http://www.facebook.com" class="fa fa-facebook"><span></span></a></li>
+                <a  href="http://www.instagram.com" class="fa fa-instagram"><span></span></a></li>
+                <a  href="mailto:group4@gmail.com" class="fa fa-envelope"><span></span></a></li>
 
-                <p>&copy; 2020 <a href="#">Group 4</a></p>
+                        
+        </nav>
+
+    </section>
+            
+    <!-- Copyright -->  
+            
+    <section class="copyRight">
                 
-            </section>
+                <p>&copy; 2020 <a href="#">Group 4</a></p>
+                      
+    </section>
+           
 
-		</footer> 
-
-	
+</footer> 
 
 
 </body>
