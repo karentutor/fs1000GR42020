@@ -1,14 +1,14 @@
 body {
     margin: 0;
-    
-    
+
+
 }
 
 /**********************************/
 /************ Nav Bar *************/
 /**********************************/
 .main {
-    position: Absolute ;
+    position: Absolute;
     display: inline-block;
     background-color: lightgray;
     opacity: 80%;
@@ -35,14 +35,14 @@ body {
 /**********************************/
 
 .img {
-    
+
     margin-left: auto;
     margin-right: auto;
 }
 
 .mySlides {
     max-width: 100%;
-    
+
 }
 
 
@@ -56,7 +56,20 @@ article {
     margin-right: auto;
     width: 60%;
     padding: 50px;
-    
+}
+
+.text {
+  position: absolute;
+  background: black;
+  opacity: 70%;
+  padding: 50px;
+  color: white;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  font-size: 20px;
+  
+
 }
 
 /**********************************/
@@ -68,10 +81,10 @@ footer {
     text-align: center;
     padding: 30px;
     background-color: lightgray;
-    
+
 }
 
-footer a{ 
+footer a{
     text-decoration: none;
     color: black;
     bottom: 0;
