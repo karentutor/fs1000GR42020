@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Us page</title>
+<link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+
+
+    <form>
+        <h4>Connect With Us</h4>
+        <div>
+            <label for="reason">Reason for Contacting Us</label>
+        </div>
+        <div>
+            <select id="reasonValues" name="reasons">
+                <option value="blank"></option>
+                <option value="purchase">Purchasing Photos</option>
+                <option value="hireUs">Hire us for your photo shoot</option>
+                <option value="sayingHi">Just saying Hi!</option>
+            </select>
+        </div>
+        <div>
+            <label for="fullName">Name</label><br>
+            <input type="text" id="fullName" required placeholder="Enter Your Name">
+        </div>
+        <div>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" required placeholder="Enter Your Email">
+        </div>
+        <div>
+            <label for="phone">Phone Number</label><br>
+            <input type="tel" id="phone" placeholder="xxx-xxx-xxxx" pattern="[2-9]{3}-[0-9]{3}-[0-9]{4}">
+        </div>
+        <div>
+            <label for="message">Message</label><br>
+            <textarea rows="5" cols="30" name="message" id="message" placeholder="Your message here....."></textarea>
+        </div>
+        <div>
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </div>
+
+
+
+
+    </form>
+
+</body>
+</html>
