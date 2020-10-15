@@ -1,7 +1,10 @@
 
-
+main {
+    width: 90%;
+    padding: 70px;
+}
 form{
-    width: 400px;
+    width: 960px;
     background-color: gray;
     border: 2px solid;
     border-radius: 5px;
