@@ -1,28 +1,37 @@
 
 main {
-    width: 90%;
-    padding: 70px;
+    max-width: 90%;
+    padding: 70px 150px 70px 150px;
+    background-color: rgb(231, 225, 225) ; 
 }
 form{
-    width: 960px;
-    background-color: gray;
+    width: 600px;
+    background-color: rgb(223, 221, 221);
     border: 2px solid;
     border-radius: 5px;
     padding: 15px;
-    margin: 20px;
+    margin: 20px 260px;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+#form-box {
+
 }
 label{
     font-size: 25px;
     font-weight:900;
     text-align: center;
 }
+#contact-map {
+    text-align: center;
+}
+
 h4 {
     font-size: 25px;
     font-weight:900;
     text-align: center;
-    text-decoration: underline;
-    margin: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
 }
 input[type=text], [type=tel], [type=email], select, textarea{
     width:90%;
