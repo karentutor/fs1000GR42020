@@ -227,3 +227,133 @@ p {
     width: 100%;
   }
 }
+
+/* admin page */
+.admin-body {
+  background-color: #f9fafb;
+  font-family: 'Open Sans', sans-serif;
+  display: flex; /* easily put stuff in the middle both horizontally and vertically -- gets all DIRECT CHILDREn*/
+  align-items: center;
+  justify-content: center;
+
+  /* if want to center vertically -- need a height here as min-height */
+  min-height: 100vh;
+  margin: 0;
+}
+
+.admin-container {
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* creates drop shadow */
+  width: 600px;
+}
+
+.admin-h2, .admin-h3 {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding: 0px;
+}
+
+.admin-form {
+  padding: 30px 40px; /* 30 px top and bottom, 40 px left and right */
+}
+
+.admin-form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative; /* here we use relative as if wish to make child absolute--- parent must be relative */
+}
+
+.admin-label {
+  color: #777;
+  display: block; /* make it not inline override default style */
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.admin-li {
+  color: #777;
+  margin-bottom: 5px; 
+}
+.admin-container input, select {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  width: 300px;
+  padding: 6px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+
+.admin-container .button-input {
+  cursor: pointer;
+  background-color: #3498db;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+  color: #fff;
+  display: inline;
+  font-size: 16px;
+  padding: 2px;
+  margin-top: 8px;
+  margin-left: 5px;
+  width: 100px;
+}
+
+.admin-container .button-picture {
+  cursor: pointer;
+  background-color: red;
+  border: 2px solid red;
+  border-radius: 4px;
+  color: #fff;
+  display: inline;
+  font-size: 16px;
+  padding: 2px;
+  margin-top: 8px;
+  margin-left: 5px;
+  width: 100px;
+}
+
+
+.admin-container .button-block {
+  cursor: pointer;
+  display: inline-block;
+  color: white;
+  border-radius: 4px;
+  background-color: #3498db;
+  border: 2px solid #3498db;
+  width: 100%;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+
+.admin-container.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.admin-container .row,
+.admin-container .row>.column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.admin-container .column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */
+.admin-container .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.admin-container .content {
+  background-color: white;
+  padding: 10px;
+}

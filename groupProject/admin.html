@@ -1,198 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      * {
-        box-sizing: border-box;
-      }
 
-      body {
-        background-color: #f1f1f1;
-        padding: 20px;
-        font-family: Arial;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
 
-      /* Center website */
-      .main {
-        max-width: 1000px;
-        margin: auto;
-      }
+<body class="admin-body">
+  <div class="admin-container">
+    <!-- class for styling, id for js-->
+    <form action="" id="form" class="admin-form">
+      <h2 class="admin-h2">Admin Panel - Manage</h2>
 
-      h1 {
-        font-size: 50px;
-        word-break: break-all;
-      }
-
-      .row {
-        margin: 8px -16px;
-      }
-
-      /* Add padding BETWEEN each column (if you want) */
-      .row,
-      .row > .column {
-        padding: 8px;
-      }
-
-      /* Create four equal columns that floats next to each other */
-      .column {
-        float: left;
-        width: 25%;
-      }
-
-      /* Clear floats after rows */
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-
-      /* Content */
-      .content {
-        background-color: white;
-        padding: 10px;
-      }
-
-      /* Responsive layout - makes a two column-layout instead of four columns */
-      @media screen and (max-width: 900px) {
-        .column {
-          width: 50%;
-        }
-      }
-
-      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-      @media screen and (max-width: 600px) {
-        .column {
-          width: 100%;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Admin Panel - Manage</h1>
-    <label>Selection categories or pictures to begin:</label>
-    <select id="select-action">
-      <option value="" autofocus>Select to begin</option>
-      <option value="action-category">Categories</option>
-      <option value="action-picture">Pictures</option>
-    </select>
-
-    <section id="category" name="manage-category">
-      <h3>Manage Categories</h3>
-
-      <section mame="view-category">
-        <lable name="view-category">View categories:</lable>
-        <ul>
-          <li>Achievement</li>
-          <li>Buildings</li>
-          <li>Landscape</li>
-          <li>Technology</li>
-        </ul>
-      </section>
-      <section name="add-category">
-        <label>Add category: </label>
-        <input type="text" name="category" />
-        <input type="submit" placeholder="category" value="Add Category" />
-        <br /><br />
-      </section>
-
-      <section name="edit-category">
-        <label>Edit category: <i>Select your category to edit it</i></label
-        ><br />
-        <select>
-          <option value="" disabled>Select</option>
-          <option value="achievement">Achievement</option>
-          <option value="buildings">Buildings</option>
-          <option value="landscape">Landscape</option>
-          <option value="technology">Technology</option>
+      <div class="admin-form-control">
+        <label class="admin-label" for="username">Select categories or pictures to begin: </label>
+        <select id="select-action">
+          <option value="choose" autofocus>Select to begin</option>
+          <option value="action-category">Categories</option>
+          <option value="action-picture">Pictures</option>
         </select>
-        <label>New value: </label>
-        <input type="text" />
-        <input type="submit" value="Update category" />
-      </section>
-      <br />
-
-      <section name="delete-category">
-        <label>Delete category: <i>Select your category to delete it</i></label
-        ><br />
-        <select>
-          <option value="landscape" disabled>Select</option>
-          <option value="achievement">Achievement</option>
-          <option value="buildings">Buildings</option>
-          <option value="landscape">Landscape</option>
-          <option value="technology">Technology</option>
-        </select>
-        <input type="submit" value="Delete category" />
-      </section>
-      <!-- end manage category section -->
-    </section>
-
-    <section id="picture">
-      <h3>Manage Pictures</h3>
-      <!-- Portfolio Gallery Grid -->
-      <div class="row">
-        <div class="column">
-          <div class="content">
-            <img src="img.jpg" alt="Mountains" style="width: 100%" />
-            <h3>Title</h3>
-            <button>Delete</button>
-          </div>
-        </div>
-        <div class="column">
-          <div class="content">
-            <img src="img.jpg" alt="Lights" style="width: 100%" />
-            <h3>Title</h3>
-            <button>Delete</button>
-          </div>
-        </div>
-        <div class="column">
-          <div class="content">
-            <img src="img.jpg" alt="Nature" style="width: 100%" />
-            <h3>Title</h3>
-            <button>Delete</button>
-          </div>
-        </div>
-        <div class="column">
-          <div class="content">
-            <img src="img.jpg" alt="Mountains" style="width: 100%" />
-            <h3>Title</h3>
-            <button>Delete</button>
-          </div>
-        </div>
+        <small>error message</small>
       </div>
 
+      <section id="category" name="manage-category">
+        <h3 class="admin-h3">Manage Categories</h3>
+
+        <section mame="view-category">
+          <label class="admin-label" name="view-category">View categories:</label>
+          <ul>
+            <li class="admin-li">Achievement</li>
+            <li class="admin-li">Buildings</li>
+            <li class="admin-li">Landscape</li>
+            <li class="admin-li">Technology</li>
+          </ul>
+        </section>
+        <section name="add-category">
+          <label class="admin-label">Add category: </label>
+          <input type="text" name="category" />
+          <button type="submit" class="button-input">Add</button>
+          <br /><br />
+        </section>
+
+        <section class="admin-form-control" name="edit-category">
+          <label class="admin-label">Edit category: <i>Select your category to edit it</i></label><br />
+          <select>
+            <option value="" disabled>Select</option>
+            <option value="achievement">Achievement</option>
+            <option value="buildings">Buildings</option>
+            <option value="landscape">Landscape</option>
+            <option value="technology">Technology</option>
+          </select>
+          <label class="admin-label">New value: </label>
+          <input type="text" />
+          <button class="button-input">Update</button>
+        </section>
+
+        <section name="delete-category">
+          <label class="admin-label">Delete category: <i>Select your category to delete it</i></label><br />
+          <select>
+            <option value="landscape" disabled>Select</option>
+            <option value="achievement">Achievement</option>
+            <option value="buildings">Buildings</option>
+            <option value="landscape">Landscape</option>
+            <option value="technology">Technology</option>
+          </select>
+          <button class="button-input" type="submit">Delete</button>
+        </section>
+
+
+        <button class="button-block home-button">Return to Admin</span>
+
+      </section>
+      <!-- end manage category section -->
+
+      <section id="picture">
+        <h3>Manage Pictures</h3>
+        <!-- Portfolio Gallery Grid -->
+        <div class="row">
+          <div class="column">
+            <div class="content">
+              <img src="img.jpg" alt="Mountains" style="width: 100%" />
+              <h3>Title</h3>
+              <button class="button-picture">Delete</button>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+              <img src="img.jpg" alt="Lights" style="width: 100%" />
+              <h3>Title</h3>
+              <button class="button-picture">Delete</button>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+              <img src="img.jpg" alt="Nature" style="width: 100%" />
+              <h3>Title</h3>
+              <button class="button-picture">Delete</button>
+            </div>
+          </div>
+        </div>
+
+
+        <section class="admin-form-control" name="edit-category">
+          <label class="admin-label">Add picture:</label><br />
+          <input type="picture" />
+          <button class="button-input">Update</button>
+        </section>
+
+
+        <button class="button-block home-button">Return to Admin</span>
+      </section>
       <!-- end manage picture section -->
-    </section>
 
-    <script type="text/javascript">
-      //start all hidden
-      // variables in global scope
-      let category = document.getElementById("category");
-      category.style.display = "none";
-      let picture = document.getElementById("picture");
-      picture.style.display = "none";
+    </form>
+  </div>
+  <script type="text/javascript">
+    //start all hidden
+    // variables in global scope
+    const category = document.getElementById("category");
+    category.style.display = "none";
+    const picture = document.getElementById("picture");
+    picture.style.display = "none";
+    const homeButton = document.querySelector('.home-button');
+    //select action handler
+    document
+      .getElementById("select-action")
+      .addEventListener("change", function () {
+        result = this.value;
+        displayPanel(result);
+      });
 
-      //select action handler
-      document
-        .getElementById("select-action")
-        .addEventListener("change", function () {
-          result = this.value;
-          displayPanel(result);
-        });
-
-      // display appropriate panel
-      function displayPanel(result) {
-        console.log(result);
-        if (result == "action-category") {
-          category.style.display = "block";
-          picture.style.display = "none";
-        } else if (result == "action-picture") {
-          picture.style.display = "block";
-          category.style.display = "none";
-        }
+    // display appropriate panel
+    function displayPanel(result) {
+      if (result == "action-category") {
+        category.style.display = "block";
+        picture.style.display = "none";
+      } else if (result == "action-picture") {
+        picture.style.display = "block";
+        category.style.display = "none";
       }
-    </script>
-  </body>
+    }
+
+    homeButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.getElementById('select-action').value = 'choose';
+      location.reload();
+    });
+  </script>
+</body>
+
 </html>
