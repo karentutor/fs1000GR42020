@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/login-page.css">
+  
+
+</head>
+
+<body>
+
+
+  <!-- ************************* -->
+  <!--***** Start Of Header *****-->
+  <!-- ************************* -->
+
+  <header class="navbar">
+      <nav class="main">
+        <a href="index.html">Home</a>
+        <a href="aboutUs.html">About Us</a>
+        <a href="main.html">Portfolio</a>
+        <a href="contactUs.html">Contact Us</a>
+        <a href="loginPage.html">Login</a>
+      </nav>
+  </header>
+
+
+  <!-- ************************* -->
+  <!--***** Start Of Login Form *****-->
+  <!-- ************************* -->
+
+  <main id="mainHolder">
+    <h1 id="loginHeader">Login</h1>
+
+
+    <form id="loginForm">
+      <input type="text" name="username" id="usernameField" class="loginFormfield" placeholder="Username">
+      <input type="password" name="password" id="password-field" class="loginFormfield" placeholder="Password">
+      <input type="submit" value="Login" id="loginFormsubmit">
+    </form>
+
+    <script type="text/javascript">
+    const loginForm = document.getElementById("loginForm");
+    const loginButton = document.getElementById("loginFormsubmit");
+    const loginErrorMsg = document.getElementById("loginErrormsg");
+
+    loginButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        const username = loginForm.username.value;
+        const password = loginForm.password.value;
+
+        if (username === "Admin" && password === "password") {
+            alert("Welcome");
+            window.location.href = "admin.html";
+        }
+
+        else {
+            alert( "Wrong password." );
+        }
+
+    })
+    </script>
+
+  </main>
+</body>
+
+</html>
