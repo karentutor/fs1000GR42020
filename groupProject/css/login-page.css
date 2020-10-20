@@ -5,7 +5,7 @@ html {
   body {
     height: 100%;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    
 
     background-color: white;
   }
@@ -86,4 +86,5 @@ html {
     background-color: #3a3a3a;
     cursor: pointer;
     outline: none;
+
   }
