@@ -5,7 +5,15 @@
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/index.css">
-
+<script>
+    function validateForm() {
+      var fullname = document.forms["contactForm"]["fullname"].value;
+      if (fullName=null || fullName == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+    }
+</script>
 </head>
 <body>
     <header class="navbar">
@@ -18,9 +26,23 @@
         </nav>
     </header>
     <main>
+    <section id="aboutUs">
+        <article>
+            <h3>About Us</h3>
+            <p>We are small group of photographers looking to provide an outlet for up and coming talent...Fusce convallis, erat id tristique eleifend, nibh eros rhoncus est, vitae semper lacus lectus at mauris. Praesent commodo fermentum commodo. Fusce facilisis lacus ut ultrices varius. Donec tincidunt augue vitae feugiat consequat. Aliquam feugiat enim vitae dolor maximus, sed molestie dui luctus. Duis eget finibus tellus, quis malesuada orci. Nulla facilisi. Nullam laoreet consequat ex, eu condimentum risus ullamcorper et. Cras at euismod orci, eu ullamcorper magna.</p>
+        </article>
+        <article>
+            <h3>Our Mission</h3>
+            <p>Our mission is to tell peoples stories through photogrpahs...Vivamus ac nibh finibus, lacinia augue sit amet, consectetur tortor. Sed nec orci dictum, efficitur odio vitae, eleifend nisi. Fusce ligula enim, convallis et fringilla mattis, sagittis vulputate odio. Duis malesuada lectus et ante mollis facilisis. Praesent molestie nisl quis lobortis tempus. Sed dictum lacus a lectus porttitor, sed pretium ipsum egestas. Donec imperdiet convallis quam, ac rutrum nulla vehicula et.</p>
+        </article>
+        <article>
+            <h3>Our Collection</h3>
+            <p>Our collection contains some of the most striking photography...Vivamus rhoncus congue erat, et vestibulum tellus gravida quis. Quisque vehicula dictum tortor quis rhoncus. Donec ullamcorper tortor id odio facilisis pulvinar. Suspendisse at metus eget augue pretium volutpat eget vel nunc. In vulputate commodo lacus in facilisis. Morbi maximus sapien sed arcu posuere, at aliquam turpis elementum. Vivamus maximus magna sit amet dapibus egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent venenatis iaculis dui, a pharetra enim fringilla eu. Curabitur iaculis tincidunt convallis. Sed eu libero est.</p>
+        </article>
+    </section>
         <h4>Connect With Us</h4>
     <section id="form-box">
-    <form>
+    <form name="contactForm" action="contactUs.html" onsubmit="return validateForm()" method="post">
         <div>
             <label for="reason">Reason for Contacting Us</label>
         </div>
@@ -29,12 +51,13 @@
                 <option value="blank"></option>
                 <option value="purchase">Purchasing Photos</option>
                 <option value="hireUs">Hire us for your photo shoot</option>
+                <option value="submit">Submit photos to our gallery</option>
                 <option value="sayingHi">Just saying Hi!</option>
             </select>
         </div>
         <div>
             <label for="fullName">Name</label><br>
-            <input type="text" id="fullName" required placeholder="Enter Your Name">
+            <input type="text" name="fullName" placeholder="Enter Your Name">
         </div>
         <div>
             <label for="email">Email</label><br>

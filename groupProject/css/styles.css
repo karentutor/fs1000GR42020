@@ -4,6 +4,16 @@ main {
     padding: 70px 150px 70px 150px;
     background-color: rgb(231, 225, 225) ; 
 }
+#aboutUs article {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 60%;
+    margin: 20px auto;
+    padding:20px;
+}
+#aboutUs h3 {
+    text-decoration: underline;
+}
 form{
     width: 600px;
     background-color: rgb(223, 221, 221);
@@ -27,7 +37,6 @@ label{
 #contact-map {
     text-align: center;
 }
-
 h4 {
     font-size: 25px;
     font-weight:900;
@@ -35,6 +44,7 @@ h4 {
     font-family: Arial, Helvetica, sans-serif;
 }
 input[type=text], [type=tel], [type=email], select, textarea{
+    font-size: 15px;
     width:90%;
     padding: 5px;
     margin: 4px;
@@ -49,4 +59,7 @@ input[type=submit], [type=reset]{
     margin: 8px;
     border-radius: 5px;
     cursor: pointer;
+}
+input[type=submit]:hover, input[type=reset]:hover{
+    background-color: lightgray;
 }
